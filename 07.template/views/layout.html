@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 공통된 layout 또한 정할 수 있다. 보통 include와 함께 사용 된다. -->
+    <!-- 레이아웃이 될 파일에는 공통적인 마크업을 넣고, 페이지마다 달라져야할 부분은 block으로 처리한다. -->
+
+    <h1>공통된 페이지입니다.</h1>
+    <p>공통된 layout을 extend로 작업할 수 있습니다.</p>
+
+
+    <!--  바뀌어야하는 부분 block으로 처리 -->
+    {% block content %}
+    {% endblock %}
+
+
+</body>
+</html>

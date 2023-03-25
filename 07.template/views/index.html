@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    {%extends 'layout.html'%}
+
+    {%block content%}
+    <!-- configure로 보냈던 데이터-->
+    <h1>Welcome to {{title}} Page</h1>
+
+    <!-- 넌적스 내부에서 변수 선언 -->
+    {% set pos="캠퍼스B" %}
+    <p>{{pos}} 강의장으로 이동하세요! </p>
+
+    <!-- 조건문 -->
+    {% set time = "저녁"%}
+
+    {%if time === '오전'%}
+    <p>오전 수업은 영표쌤과 함께하는 Node.js! </p>
+    {% elif time === '오후' %}
+    <p>오후 수업은 XX쌤과 함께하는 React.js! </p>
+    {% else %}
+    <p>종례입니다. 집에 갑시다! </p>
+    {% endif %}
+
+    <!-- 반복문  -->
+
+    {% set menu = ['아메리카노', '민트초코', '카페라떼']%}
+
+    <table border="1px solid black">
+        <tr>
+            <th colspan="3">MENU</th>
+        </tr>
+        <tr>
+            {% for item in menu %}
+                <td>{{loop.index}}. {{item}}</td>
+            {% endfor %}
+        </tr>
+    </table>
+
+    <!-- 넌적스 안에 다른 html 파일 추가 
+    header 나, footer 등 웹 제작 시 공통되는 부분을 따로 관리할 수 있다.
+    -->
+
+    {% include "refer.html" %}
+
+    
+    {%endblock%}
+
+
+    </body>
+
+</html>

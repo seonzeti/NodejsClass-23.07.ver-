@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--html파일에서 서버로 값을 보내기 위한 3가지 조건-->
+    <form action="http://localhost:8888/">
+        <!--1. form태그에 action속성 : 서버페이지의 주소설정-->
+        <input type="text" name="id">
+        <input type="text" name="pw">
+        <!--2. input태그에 name속성 : input태그의 이름표설정-->
+        <input type="submit" value="전송">
+        <!--3. input태그에 type속성 중 submit값 : 서버페이지로 값을 보내기위한 버튼-->
+    </form>
+</body>
+
+</html>
